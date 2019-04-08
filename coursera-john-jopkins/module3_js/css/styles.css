@@ -1,0 +1,74 @@
+body {
+  font-size: 16px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+#header-nav {
+  background-color: grey;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+.navbar-brand h1 {
+  color: whitesmoke;
+  font-size: 3.0em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#nav-list a {
+  color: whitesmoke;
+  text-align: center;
+  background-color: transparent;
+  font-weight: bolder;
+}
+#nav-list a:hover {
+  background: transparent;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+.description {
+  border: 2px solid transparent;
+  background-color: lightsteelblue;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+p {
+  text-align: justify;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 {
+    padding-top: 20px;
+    font-size: 5vw;
+  }
+
+  #collapsable-nav a {
+    font-size: 1.5em;
+  }
+
+}
