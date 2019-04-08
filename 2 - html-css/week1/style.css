@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;  
+}
+
+body {
+  background-color: #e7e5e5;
+}
+
+.header {
+  padding: 4%;
+  text-align: center;
+  background-color: #2fc58b;
+  color: white;
+  letter-spacing: 8px;
+}
+
+.flex-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+  font-size: 16px;
+}
+
+#left-col {
+  flex: 22%;
+  background-color: #f1f1f1;
+  padding: 2%;
+  margin: 1%;
+  border: solid #2fc58b 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#left-col li > img {
+  width: 100%;
+  filter: grayscale(80%)
+}
+
+
+.flex-container > div {
+  flex: 50%;
+  padding: 20px;
+  margin: 3%;
+  text-align: center;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  line-height: 1.5;
+  border: solid #2fc58b 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-container > h2 {
+  font-size: 2.5em;
+  margin-bottom: 3%;  
+}
+
+#bar > li {
+  position: relative;
+  list-style: none;
+  margin: 45px;
+}
+
+#bar > li:before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: rgb(204, 204, 204);
+  border-radius: 5000px;
+}
+
+#bar > li:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 0;
+  height: 15px;
+  background-color: #2fc58b;
+  border-radius: 5000px;
+  animation-duration: .9s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+li.html:after {
+  animation-name: html;
+}
+
+@keyframes html {
+  to {
+      width: 90%;
+  }
+}
+
+li.css:after {
+  animation-name: css;
+}
+
+@keyframes css {
+  to {
+      width: 80%;
+  }
+}
+
+li.js:after {
+  animation-name: js;
+}
+
+@keyframes js {
+  to {
+      width: 75%;
+  }
+}
+
+li.python:after {
+  animation-name: python;
+}
+
+@keyframes python {
+  to {
+      width: 90%;
+  }
+}
+
+footer {
+  margin-top: 8%;
+  padding: 2%;
+  background-color: #2fc58b;
+  text-align: center;
+  color: white;  
+}
+
+footer > p {
+  margin-bottom: 3px;
+  font-size: 1.5em;
+}
+
+i {
+  margin: 16px;
+}
+a > i:hover {
+  opacity: 0.66;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-container {flex-direction: column;}
+}
+
+
+
+
