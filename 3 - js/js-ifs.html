@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Conditionals</title>
+    <style>
+        .red,
+        .orange,
+        .green {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .orange {
+            background: orange;
+        }
+
+        .green {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Conditionals</h1>
+    <!-- <div class="red"></div>
+        <div class="orange"></div>
+        <div class="green"></div> -->
+
+
+
+
+    <script>
+        let trafficLight = "green";
+
+
+        // if (trafficLight === "red") {
+        //     document.write("<p class='red'></p>");
+        // }
+        // if (trafficLight === "orange") {
+        //     document.write("<p class='orange'></p>");
+        // }
+        // if (trafficLight === "green") {
+        //     document.write("<p class='green'></p>");
+        // }
+
+        switch (trafficLight) {
+            case "red":
+                document.write("<p class='red'></p>");
+                break;
+            case "orange":
+                document.write("<p class='orange'></p>");
+                break;
+            case "green":
+                document.write("<p class='green'></p>");
+        }
+
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Κυριακή";
+                break;
+            case 1:
+                day = "Δευτέρα";
+                break;
+            case 2:
+                day = "Τρίτη";
+                break;
+            case 3:
+                day = "Τετάρτη";
+                break;
+            case 4:
+                day = "Πέμπτη";
+                break;
+            case 5:
+                day = "Παρασκεύη";
+                break;
+            case 6:
+                day = "Σάββατο";
+        }
+        document.write("Σήμερα είναι " + "<strong>" + day + "</strong>");
+
+        switch(new Date().getDay()) {
+            case 1: case 2: case 3: case 4: case 5: 
+            document.write("<div><strong>We are open today</strong></div>"); 
+            break; 
+            
+            case 6: case 0:
+            document.write("<div><strong>We are closed today</strong></div>"); 
+        }
+
+
+    </script>
+</body>
+
+</html>
