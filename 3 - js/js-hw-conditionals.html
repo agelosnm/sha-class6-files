@@ -1,0 +1,62 @@
+<!-- Home Exercise:
+    - Find out how to get the current Hour
+    - Display we are open if it is 08:00 to 20:00
+    - Display we are closed now if it is outside of the schedule
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS HW 3</title>
+</head>
+<body>
+        <h1>JS HW 3</h1>
+
+
+        <script>
+            let hour = new Date().getHours();
+            let mins = new Date().getMinutes();
+            let numDay = new Date().getDay(); //arithmetic value of day
+            let day; //string value of day
+
+            switch (numDay) {
+            case 0:
+                day = "Κυριακή";
+                break;
+            case 1:
+                day = "Δευτέρα";
+                break;
+            case 2:
+                day = "Τρίτη";
+                break;
+            case 3:
+                day = "Τετάρτη";
+                break;
+            case 4:
+                day = "Πέμπτη";
+                break;
+            case 5:
+                day = "Παρασκεύη";
+                break;
+            case 6:
+                day = "Σάββατο";
+        }
+        document.write("Σήμερα είναι " + "<strong>" + day + "</strong>");
+
+        switch(numDay) {
+            case 1: case 2: case 3: case 4: case 5: 
+            document.write("<div>We are open today</div>"); 
+            if (hour < 8 || hour > 20) {
+                document.write("<div><strong>We are currently closed.</strong> Please come back between 08:00 - 20:00 Monday - Friday</div>");
+            }
+            break; 
+            
+            case 6: case 0:
+            document.write("<div>We are closed today</div>"); 
+        }
+            
+        </script>
+</body>
+</html>
