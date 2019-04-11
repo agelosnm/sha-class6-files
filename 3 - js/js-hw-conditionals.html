@@ -10,6 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS HW 3</title>
+    <style>
+        .open {
+            background: green;
+            color: white;
+        }
+
+        .closed {
+            background: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
         <h1>JS HW 3</h1>
@@ -47,14 +58,14 @@
 
         switch(numDay) {
             case 1: case 2: case 3: case 4: case 5: 
-            document.write("<div>We are open today</div>"); 
+            document.write("<div class='open'>We are open today</div>"); 
             if (hour < 8 || hour > 20) {
-                document.write("<div><strong>We are currently closed.</strong> Please come back between 08:00 - 20:00 Monday - Friday</div>");
+                document.write("<div class='closed'><strong>We are currently closed.</strong> Please come back between 08:00 - 20:00 Monday - Friday</div>");
             }
             break; 
             
             case 6: case 0:
-            document.write("<div>We are closed today</div>"); 
+            document.write("<div class='closed'>We are closed today</div>"); 
         }
             
         </script>
